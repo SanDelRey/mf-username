@@ -1,6 +1,6 @@
-// the bounty's single line lives in entry.txt; this program just emits it.
 import { mkdirSync, writeFileSync } from 'node:fs';
-const LINE = 'om-senpai';
+// the entry is the account's own make.fun handle, one word
+const HANDLE = 'om-senpai';
 const out = (process.env.MAKEFUN_OUTPUT_DIR ?? '/output').replace(/\/$/, '');
 mkdirSync(out, { recursive: true });
-writeFileSync(`${out}/entry.txt`, `${LINE.trim()}\n`);
+writeFileSync(`${out}/entry.txt`, `${HANDLE}\n`);
